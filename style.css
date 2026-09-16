@@ -1,0 +1,161 @@
+/* Variables de colores para el tema oscuro */
+:root {
+    --bg-fondo: #0f172a;
+    --bg-paneles: #1e293b;
+    --texto-principal: #f8fafc;
+    --texto-secundario: #94a3b8;
+    --azul-primario: #3b82f6;
+    --rojo-peligro: #ef4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-fondo);
+    color: var(--texto-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* El contenedor principal usa flexbox para poner la barra al lado del contenido */
+.app-contenedor {
+    display: flex;
+    width: 95%;
+    max-width: 1200px;
+    height: 90vh;
+    background-color: var(--bg-paneles);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* --- BARRA LATERAL --- */
+.sidebar {
+    width: 250px;
+    background-color: #151e2e;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: var(--azul-primario);
+}
+
+.menu-filtros {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1; /* Empuja la configuración hacia abajo */
+}
+
+.btn-filtro {
+    background: transparent;
+    color: var(--texto-secundario);
+    border: none;
+    text-align: left;
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.btn-filtro:hover, .btn-filtro.activo {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--azul-primario);
+}
+
+/* --- PANEL PRINCIPAL --- */
+.contenido-principal {
+    flex-grow: 1;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.header-principal {
+    background-color: #172033;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icono-grande {
+    background-color: var(--azul-primario);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+/* --- ZONA DE AGREGAR --- */
+.seccion-agregar {
+    display: flex;
+    gap: 15px;
+    background-color: #172033;
+    padding: 15px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.seccion-agregar input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+#agregar-btn {
+    background-color: var(--azul-primario);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- FOOTER ESTADÍSTICAS --- */
+.estadisticas-footer {
+    display: flex;
+    gap: 15px;
+    margin-top: auto; /* Lo empuja hacia abajo */
+    background-color: #172033;
+    padding: 20px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
