@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Agregamos FontAwesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-contenedor">
+        
+        <!-- BARRA LATERAL -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-check-double"></i>
+                <h2>Task Manager</h2>
+            </div>
+            
+            <nav class="menu-filtros">
+                <button class="btn-filtro activo" id="filtro-todas">
+                    <i class="fa-solid fa-house"></i> Tareas
+                </button>
+                <button class="btn-filtro" id="filtro-completadas">
+                    <i class="fa-solid fa-circle-check"></i> Completadas
+                </button>
+                <button class="btn-filtro" id="filtro-pendientes">
+                    <i class="fa-regular fa-clock"></i> Pendientes
+                </button>
+            </nav>
+            
+            <div class="configuracion">
+                <button class="btn-filtro">
+                    <i class="fa-solid fa-gear"></i> Configuración
+                </button>
+            </div>
+        </aside>
+
+        <!-- PANEL PRINCIPAL -->
+        <main class="contenido-principal">
+            
+            <!-- Encabezado superior -->
+            <header class="header-principal">
+                <div class="titulo-header">
+                    <div class="icono-grande">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div>
+                        <h1>Task Manager</h1>
+                        <p>Organiza tus tareas, cumple tus metas</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Zona para agregar tareas -->
+            <div class="seccion-agregar">
+                <i class="fa-solid fa-list-ul icono-input"></i>
+                <input type="text" id="tarea-input" placeholder="Escribe una tarea...">
+                <button id="agregar-btn">
+                    <i class="fa-solid fa-plus"></i> Agregar tarea
+                </button>
+            </div>
+
+            <!-- Lista de tareas -->
+            <ul id="lista-de-tareas">
+                <!-- Aquí se inyectarán las tareas con JavaScript -->
+            </ul>
+
+            <!-- Barra de estadísticas inferior -->
+            <div class="estadisticas-footer">
+                <div class="stat-item bg-azul">
+                    <i class="fa-solid fa-list-check"></i>
+                    <div>
+                        <span id="contador-totales">0</span>
+                        <p>Tareas totales</p>
+                    </div>
+                </div>
+                <div class="stat-item bg-verde">
+                    <i class="fa-solid fa-check"></i>
+                    <span id="contador-completadas">0</span> Completadas
+                </div>
+                <div class="stat-item bg-naranja">
+                    <i class="fa-solid fa-clock"></i>
+                    <span id="contador-tareas">0</span> Pendientes
+                </div>
+                <button id="btn-limpiar">
+                    <i class="fa-regular fa-trash-can"></i> Limpiar Completadas
+                </button>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
